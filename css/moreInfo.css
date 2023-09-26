@@ -1,0 +1,192 @@
+/* CSS for the more information page */
+
+:root {
+    --navbar-light-color: #070866;
+    --navbar-dark-color: rgb(186, 104, 118);
+}
+
+[color-scheme="dark"] {
+    --navbar-color: var(--navbar-dark-color);
+}
+
+[color-scheme="light"] {
+    --navbar-color: var(--navbar-light-color);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* cursor pointer */
+.cursor {
+    width: 20px;
+    height: 20px;
+    mix-blend-mode: difference;
+    background-color: rgb(240, 235, 235);
+    border-radius: 50%;
+    position: absolute;
+    transition: all linear .2s;
+    z-index: 9;
+
+}
+
+.navbar-brand .logo {
+    height: 50px;
+}
+
+.info {
+    justify-content: center;
+    align-items: center;
+    height: 88%;
+}
+
+.nav-info h1 {
+    display: none;
+}
+
+#info-container {
+    background-color: rgb(235, 140, 156);
+    width: 60%;
+    height: auto;
+    gap: 15px;
+    padding: 15px 50px;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    box-shadow: 0 0 4px 3px #e5e5f0;
+    cursor: pointer;
+    transition: all ease .4s;
+}
+
+#info-container:hover {
+    transform: scale(1.08);
+    background-color: rgb(241, 169, 62);
+    color: #060606;
+    /* opacity: 1; */
+}
+
+.hero-name {
+    justify-content: center;
+}
+
+.hero-img-and-more-info {
+    gap: 30px;
+}
+
+.hero-img {
+    width: 20%;
+    height: auto;
+    min-width: 120px;
+}
+
+.more-info {
+    gap: 15px;
+    font-size: 1.3rem;
+}
+
+.id,
+.comics,
+.series,
+.stories {
+    gap: 5px;
+}
+
+.hero-discription {
+    font-size: 1.1rem;
+}
+
+.hero-discription b {
+    font-size: 1.3rem;
+}
+
+.bg-img {
+    z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+
+
+    #info-container {
+        /* height: 440px; */
+        margin-top: 480px;
+    }
+
+    .nav-info {
+        /* position: relative; */
+        height: 180px;
+        width: 100%;
+    }
+
+
+    .favAndTheme-btn {
+        /* width: 100px; */
+        display: flex;
+        flex-direction: column-reverse;
+        display: none;
+        /* background-color: #d9daee; */
+        transition: all ease-in-out 1s;
+    }
+
+    .nav-info h1 {
+        color: #d9daee;
+        display: block;
+        position: absolute;
+        right: 20px;
+    }
+
+
+    .nav-info .logo {
+        /* position: absolute;
+        left: 10px; */
+        height: 90px;
+        width: 90px;
+
+    }
+
+    .nav-info .navbar-brand a {
+        /* width: 50px; */
+        position: absolute;
+        top: 120px;
+        /* left: 120px;
+        text-align: center; */
+    }
+
+    .nav-info .favAndTheme-btn {
+        position: absolute;
+        right: 5px;
+    }
+
+    .hero-img-and-more-info #portraitImage {
+        height: 130px;
+    }
+
+    /* .navbar-brand .logo {
+        height: 80px;
+    } */
+
+    .hero-img-and-more-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-discription {
+        text-align: center;
+    }
+
+    #info-container {
+        width: 85%;
+    }
+
+    #landscapeImage {
+        width: 100%
+    }
+
+    .info {
+        height: 10vh;
+        margin-top: 240px;
+    }
+
+    .more-info {
+        gap: 0px;
+    }
+}

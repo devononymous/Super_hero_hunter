@@ -1,0 +1,141 @@
+/* -------> CSS for the favourite page <------- */
+
+:root {
+    --navbar-light-color: #070866;
+    --navbar-dark-color: rgb(186, 104, 118);
+}
+
+[color-scheme="dark"] {
+    --navbar-color: var(--navbar-dark-color);
+}
+
+[color-scheme="light"] {
+    --navbar-color: var(--navbar-light-color);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* cursor pointer */
+.cursor {
+    width: 20px;
+    height: 20px;
+    mix-blend-mode: difference;
+    background-color: rgb(240, 235, 235);
+    border-radius: 50%;
+    position: absolute;
+    transition: all linear .2s;
+    z-index: 9;
+
+}
+
+.favourite-characters {
+    margin-top: 50px;
+
+}
+
+.cards-container {
+
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/* .character-info .btn {
+    width: 100%;
+} */
+
+.card {
+
+    background-color: rgb(230, 123, 141, .8);
+    height: 490px;
+    width: 250px;
+    margin: 40px 25px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    gap: 5px;
+    z-index: 2;
+    backdrop-filter: blur(3px);
+    transition: all ease-in-out .4s;
+    box-shadow: 0 0 2px 2px #cbcbe0;
+    cursor: pointer;
+
+}
+
+.card:hover {
+    transform: scale(1.1);
+
+
+}
+
+.card img {
+    border-radius: 10px 10px 0 0;
+}
+
+.name {
+    font-size: 20px;
+
+}
+
+/* .character-info .btn {
+    margin:auto 
+} */
+
+.btn {
+    border-radius: 10px;
+    width: 240px;
+    margin: auto;
+    box-shadow: 0 0 6px 2px #dde0dd;
+
+}
+
+.remove-btn:hover {
+    color: rgb(8, 8, 8);
+}
+
+.no-characters {
+    margin-top: 20px;
+    font-size: 42px;
+    font-weight: 600;
+    color: #e0dbdb;
+    text-shadow: 0 0 4px #c6c6cd;
+}
+
+
+@media screen and (max-width: 576px) {
+
+    /* .fav-navbar {
+        
+        position: fixed;
+    } */
+
+
+    .favourite-characters {
+        margin-top: 200px;
+    }
+
+    .card {
+        height: 445px;
+        width: 70%;
+        margin-bottom: -20px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+}
+
+@media only screen and (width: 280px) {
+    .fav-btn {
+        width: 120px;
+    }
+
+    .btn {
+        width: 150px;
+    }
+
+}

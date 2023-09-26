@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" id="root" color-scheme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icon.jpeg" type="image/x-icon">
+    <title id="page-title">Superhero Hunter</title>
+
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/7044ac553b.js" crossorigin="anonymous"></script>
+
+
+    <!------- Custom Stylesheet ------->
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/moreInfo.css">
+</head>
+
+<body id="main">
+    <!-- coursor mover point -->
+    <div class="cursor">
+    </div>
+    <!------- Navbar ------->
+
+    <nav class="flex-row navbar nav-info">
+
+        <!-------  Icon and Name ------->
+
+        <div class="flex-row navbar-brand">
+            <img class="logo" src="./assets/icon.png" alt="">
+            <a href="./index.html">
+                <span>Superhero Hunter</span>
+            </a>
+        </div>
+        <!------- Theme Button and Favourites Button ------->
+        <h1><i class="fa-solid fa-bars"></i></h1>
+        <div class="flex-row favAndTheme-btn">
+
+            <button id="theme-btn" class="btn"><i class="fa-solid fa-moon"></i></button>
+            <a class="flex-row link-to-different-page" href="./favourite.html">
+                <button class="btn fav-btn"> <i class="fa-solid fa-heart fav-icon"></i> &nbsp; Favourites</button>
+            </a>
+            <a class="flex-row link-to-different-page" href="./index.html">
+                <button class="btn fav-btn"> <i class="fa-solid fa-house"></i> &nbsp; Home</button>
+            </a>
+        </div>
+    </nav>
+
+    <!------- Info Container ------->
+    <div class="flex-row info">
+        <section class="flex-col" id="info-container">
+
+            <!-- <div class="flex-row hero-name">${heroInfo.name}</div>
+            <div class="flex-row hero-img-and-more-info">
+                <img id="portraitImage" class="hero-img" src="${heroInfo.portraitImage}" alt="">
+                <img style="display:none;" id="landscapeImage" src="${heroInfo.landscapeImage}" alt="">
+                <div class="flex-col more-info">
+                    <div class="flex-row id">
+                        <b>ID:</b><span>${heroInfo.id}</span>
+                    </div>
+                    <div class="flex-row comics">
+                        <b>Comics:</b><span>${heroInfo.comics}</span>
+                    </div>
+                    <div class="flex-row series">
+                        <b>Series:</b><span>${heroInfo.series}</span>
+                    </div>
+                    <div class="flex-row stories">
+                        <b>Stories:</b><span>${heroInfo.stories}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-col hero-discription">
+                <b>Discription:</b>
+                <p>${heroInfo.description != "" ? heroInfo.description : "No Description Available"}</p>
+            </div>
+            <div style="display:none;">
+                <span>${heroInfo.name}</span>
+                <span>${heroInfo.portraitImage}</span>
+                <span>${heroInfo.landscapeImage}</span>
+                <span>${heroInfo.id}</span>
+                <span>${heroInfo.comics}</span>
+                <span>${heroInfo.series}</span>
+                <span>${heroInfo.stories}</span>
+                <span>${heroInfo.squareImage}</span>
+                <span>${heroInfo.description}</span>
+            </div>
+            <button class="btn add-to-fav-btn">${favouritesCharacterIDs.has(`${heroInfo.id}`) ? "<i class=\"fa-solid
+                    fa-heart-circle-minus\"></i> &nbsp; Remove From Favourites" : "<i class=\"fa-solid fa-heart fav-icon\"></i>
+                &nbsp; Add To Favourites</button> -->
+        </section>
+    </div>
+
+
+    <!------- Toasts for notifying user that character is added or removed from favourites ------->
+    <span data-visiblity="hide" class="fav-toast">Added To Favourites</span>
+    <span data-visiblity="hide" class="remove-toast">Removed From Favourites</span>
+
+    <!------- External Script file ------->
+    <script defer src="./javaScript/moreInfo.js"></script>
+</body>
+
+</html>
